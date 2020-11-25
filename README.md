@@ -1,6 +1,6 @@
 # BrDocs
 
-PHP BrDocs é uma lib especializada em gerar, validar e formatar documentos brasileiros.
+PHP BrDocs auxilia gerar, validar e formatar documentos brasileiros.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
@@ -12,7 +12,7 @@ Documentos suportados até o momento
 
 Requisitos
 ----
-- PHP >=5.4
+- PHP >= 5.4
 
 Instalação
 ----

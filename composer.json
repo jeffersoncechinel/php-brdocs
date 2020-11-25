@@ -1,8 +1,9 @@
 {
     "name": "jeffersoncechinel/php-brdocs",
-    "description": "PHP library to validate, format and generate brazilian documents.",
+    "description": "PHP BrDocs auxilia gerar, validar e formatar documentos brasileiros.",
     "version" : "1.0.0",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Jefferson Cechinel",
