@@ -8,6 +8,10 @@ namespace JC\BrDocs\Traits;
  */
 trait GeneratorTrait
 {
+    /**
+     * @param $digits
+     * @return int
+     */
     public static function generateCpfVerifierDigit($digits)
     {
         $sum = 0;
@@ -37,6 +41,10 @@ trait GeneratorTrait
         return $digit;
     }
 
+    /**
+     * @param $digits
+     * @return int
+     */
     public static function generateCnpjVerifierDigit($digits)
     {
         $sum = 0;

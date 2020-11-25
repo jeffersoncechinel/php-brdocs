@@ -13,6 +13,10 @@ class CnpjValidator
 {
     use GeneratorTrait;
 
+    /**
+     * @param $document
+     * @return bool
+     */
     public static function validate($document)
     {
         $cnpj = StringHelper::numbersOnly($document);

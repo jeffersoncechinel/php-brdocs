@@ -13,6 +13,10 @@ class CpfValidator
 {
     use GeneratorTrait;
 
+    /**
+     * @param $document
+     * @return bool
+     */
     public static function validate($document)
     {
         $cpf = StringHelper::numbersOnly($document);

@@ -10,6 +10,10 @@ use JC\BrDocs\Helpers\StringHelper;
  */
 class CpfFormatter
 {
+    /**
+     * @param string $document
+     * @return mixed
+     */
     public static function format(string $document)
     {
         return StringHelper::applyMask('###.###.###-##', $document);

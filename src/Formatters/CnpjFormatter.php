@@ -10,6 +10,10 @@ use JC\BrDocs\Helpers\StringHelper;
  */
 class CnpjFormatter
 {
+    /**
+     * @param $document
+     * @return mixed
+     */
     public static function format($document)
     {
         return StringHelper::applyMask('##.###.###/####-##', $document);
