@@ -1,6 +1,6 @@
 # BrDocs
-
-PHP BrDocs auxilia gerar, validar e formatar documentos brasileiros.
+##### Manipulação de números de documentos brasileiros de forma fácil
+PHP BrDocs auxilia na validação e formatação de documentos brasileiros como CPF e CNPJ.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
@@ -26,24 +26,72 @@ composer require jeffersoncechinel/php-brdocs
 Exemplo de uso
 ----
 
+Exemplos de como validar e formatar um CPF
+
 ```php
 use JC\BrDocs\BrDoc;
 
-$brDoc = new BrDoc();
+$obj = new BrDoc();
 
-// Validar CPF
-$brDoc->cpf()->validate('111.222.333-44'); # retorna true/false
-$brDoc->cpf()->validate('11122233344'); # retornar true/false
+// Verificar se um CPF é válido com input formatado
+var_dump($obj->cpf('059.440.570-09')->isValid());
+//bool(true)
 
-// Formatar CPF
-$brDoc->cpf()->format('11122233344'); # retorna 111.222.333-44
+// Verificar se um CPF é válido com input normalizado
+var_dump($obj->cpf('05944057009')->isValid());
+//bool(true)
 
-// Validar CNPJ
-$brDoc->cnpj()->validate('11.222.333/0001-10'); # retorna true/false
-$brDoc->cnpj()->validate('11222333000110'); # retorna true/false
+// Normalizar o CPF antes de validar
+var_dump($obj->cpf('5944057009')->normalize()->isValid());
+//bool(true)
 
-// Formatar CNPJ
-$brDoc->cnpj()->format('11222333000110'); # retorna 11.222.333/0001-10
+// Formatar um CPF
+var_dump($obj->cpf('05944057009')->format()->get());
+//string(14) "045.111.359-40"
+
+// Normalizar e formatar um CPF
+var_dump($obj->cpf('05944057009')->normalize()->format()->get());
+//string(14) "045.111.359-40"
+
+// Normalizar, validar e formatar um CPF
+var_dump($obj->cpf('05944057009')->normalize()->validate()->format()->get());
+//string(14) "045.111.359-40"
+
+
+```
+
+Exemplos de como validar e formatar um CNPJ
+
+```php
+use JC\BrDocs\BrDoc;
+
+$obj = new BrDoc();
+
+// Verificar se um CNPJ é válido com input formatado
+var_dump($obj->cnpj('03.939.810/0001-04')->isValid());
+//bool(true)
+
+// Verificar se um CNPJ é válido com input normalizado
+var_dump($obj->cnpj('03939810000104')->isValid());
+//bool(true)
+
+// Normalizar o CNPJ antes de validar
+var_dump($obj->cnpj('3939810000104')->normalize()->isValid());
+//bool(true)
+
+// Formatar um CNPJ
+var_dump($obj->cnpj('03939810000104')->format()->get());
+//string(18) "03.939.810/0001-04"
+
+// Normalizar e formatar um CNPJ
+var_dump($obj->cnpj('3939810000104')->normalize()->format()->get());
+//string(18) "03.939.810/0001-04"
+
+// Normalizar, validar e formatar um CNPJ
+var_dump($obj->cnpj('3939810000104')->normalize()->validate()->format()->get());
+//string(18) "03.939.810/0001-04"
+
+
 ```
 
 Contributing

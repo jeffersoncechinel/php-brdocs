@@ -11,13 +11,13 @@ use JC\BrDocs\Clients\Cpf;
  */
 class BrDoc
 {
-    public function cpf()
+    public function cpf(string $document)
     {
-        return new Cpf();
+        return new Cpf($document);
     }
 
-    public function cnpj()
+    public function cnpj($document)
     {
-        return new Cnpj();
+        return new Cnpj($document);
     }
 }
