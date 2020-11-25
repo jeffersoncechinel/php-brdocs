@@ -5,15 +5,17 @@ PHP BrDocs é uma lib especializada em gerar, validar e formatar documentos bras
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 Documentos suportados até o momento
----
+----
 
  - CPF - Cadastro de Pessoa Física
  - CNPJ - Cadastro Nacional de Pessoa Jurídica
 
-## Requisitos
+Requisitos
+----
 - PHP >=5.4
 
-## Instalação
+Instalação
+----
 
 Use o gerenciador de pacotes [composer](https://getcomposer.org/download/) para instalar o BrDocs.
 
@@ -21,7 +23,8 @@ Use o gerenciador de pacotes [composer](https://getcomposer.org/download/) para 
 composer require jeffersoncechinel/php-brdocs
 ```
 
-## Exemplo de uso
+Exemplo de uso
+----
 
 ```php
 use JC\BrDocs\BrDoc;
@@ -43,9 +46,11 @@ $brDoc->cnpj()->validate('11222333000110'); # retorna true/false
 $brDoc->cnpj()->format('11222333000110'); # retorna 11.222.333/0001-10
 ```
 
-## Contributing
+Contributing
+----
 Pull requests são bem vindos. 
 Certifique-se de atualizar os testes apropriadamente.
 
-## Licença
+Licença
+----
 [MIT](https://choosealicense.com/licenses/mit/)
