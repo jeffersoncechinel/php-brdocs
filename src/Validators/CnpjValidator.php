@@ -21,7 +21,7 @@ class CnpjValidator
     {
         $cnpj = StringHelper::numbersOnly($document);
 
-        if (strlen($cnpj) != 14) {
+        if (mb_strlen($cnpj) != 14) {
             return false;
         }
 

@@ -12,7 +12,7 @@ Documentos suportados até o momento
 
 Requisitos
 ----
-- PHP >= 5.4
+- PHP >= 5.5
 
 Instalação
 ----

@@ -21,7 +21,7 @@ class CpfValidator
     {
         $cpf = StringHelper::numbersOnly($document);
 
-        if (strlen($cpf) != 11) {
+        if (mb_strlen($cpf) != 11) {
             return false;
         }
 

@@ -17,16 +17,16 @@ trait GeneratorTrait
         $sum = 0;
 
         // first digit
-        if (strlen($digits) + 1 == 10) {
+        if (mb_strlen($digits) + 1 == 10) {
             $positions = [10, 9, 8, 7, 6, 5, 4, 3, 2];
         }
 
         // second digit
-        if (strlen($digits) + 1 == 11) {
+        if (mb_strlen($digits) + 1 == 11) {
             $positions = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2];
         }
 
-        for ($i = 0; $i < strlen($digits); $i++) {
+        for ($i = 0; $i < mb_strlen($digits); $i++) {
             $sum += $digits[$i] * $positions[$i];
             $positions--;
         }
@@ -50,16 +50,16 @@ trait GeneratorTrait
         $sum = 0;
 
         // first digit
-        if (strlen($digits) == 12) {
+        if (mb_strlen($digits) == 12) {
             $positions = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
         }
 
         // second digit
-        if (strlen($digits) == 13) {
+        if (mb_strlen($digits) == 13) {
             $positions = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
         }
 
-        for ($i = 0; $i < strlen($digits); $i++) {
+        for ($i = 0; $i < mb_strlen($digits); $i++) {
             $sum += $digits[$i] * $positions[$i];
             $positions--;
         }

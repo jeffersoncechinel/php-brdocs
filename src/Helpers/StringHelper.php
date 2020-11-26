@@ -21,7 +21,7 @@ class StringHelper
 
         $value = self::numbersOnly($value);
 
-        for ($i = 0; $i < strlen($value); $i++) {
+        for ($i = 0; $i < mb_strlen($value); $i++) {
             $mask[strpos($mask, "#")] = $value[$i];
         }
 
