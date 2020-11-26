@@ -16,7 +16,7 @@ class BrDoc
      * @param string $document
      * @return Cpf
      */
-    public function cpf(string $document)
+    public static function cpf(string $document)
     {
         return new Cpf($document);
     }
@@ -25,7 +25,7 @@ class BrDoc
      * @param $document
      * @return Cnpj
      */
-    public function cnpj($document)
+    public static function cnpj(string $document)
     {
         return new Cnpj($document);
     }
@@ -34,9 +34,9 @@ class BrDoc
      * @param $document
      * @return Cnpj|Cpf
      */
-    public function cpfCnpj($document)
+    public static function cpfCnpj(string $document)
     {
-        if ($this->isCpf($document)) {
+        if (self::isCpf($document)) {
             return new CPf($document);
         }
 
@@ -47,7 +47,7 @@ class BrDoc
      * @param $document
      * @return bool
      */
-    public function isCpf($document)
+    protected static function isCpf(string $document)
     {
         $document = StringHelper::numbersOnly($document);
         
