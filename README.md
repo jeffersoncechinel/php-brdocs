@@ -97,4 +97,4 @@ Certifique-se de atualizar os testes apropriadamente.
 
 Licença
 ----
-[MIT](https://choosealicense.com/licenses/mit/)
+Este projeto está licenciado sob a licença MIT - [LICENSE](LICENSE)
