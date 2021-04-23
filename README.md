@@ -1,4 +1,4 @@
-# BrDocs
+# PHP BrDocs
 ##### Manipulação de números de documentos brasileiros de forma fácil
 PHP BrDocs auxilia na validação e formatação de documentos brasileiros como CPF e CNPJ.
 
