@@ -2,7 +2,7 @@
 
 namespace Tests\Clients;
 
-use JC\BrDocs\Services\Cpf;
+use JC\BrDocs\Clients\Cpf;
 use PHPUnit\Framework\TestCase;
 
 class CpfTest extends TestCase

@@ -3,7 +3,7 @@
 namespace JC\BrDocs\Validators;
 
 use JC\BrDocs\Helpers\StringHelper;
-use JC\BrDocs\Traits\GeneratorTrait;
+use JC\BrDocs\Traits\CpfTrait;
 
 /**
  * Class Cpf
@@ -11,7 +11,7 @@ use JC\BrDocs\Traits\GeneratorTrait;
  */
 class CpfValidator
 {
-    use GeneratorTrait;
+    use CpfTrait;
 
     /**
      * @param $document

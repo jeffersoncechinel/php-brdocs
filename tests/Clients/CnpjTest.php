@@ -2,7 +2,7 @@
 
 namespace Tests\Clients;
 
-use JC\BrDocs\Services\Cnpj;
+use JC\BrDocs\Clients\Cnpj;
 use PHPUnit\Framework\TestCase;
 
 class CnpjTest extends TestCase
