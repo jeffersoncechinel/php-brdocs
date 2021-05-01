@@ -11,12 +11,12 @@ class CnpjTest extends TestCase
     /**
      * @dataProvider normalizeProvider
      */
-    public function testNormalize($document)
+    public function testNormalize($document, $expectedResult)
     {
         $obj = new Cnpj($document);
         $result = $obj->normalize()->get();
 
-        $this->assertEquals('03939810000104', $result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -54,19 +54,19 @@ class CnpjTest extends TestCase
     {
         yield 'should_input_valid_data_1' => [
             'document' => '03.939.810/0001-04',
-            'expectedResult' => '03939810/000104'
+            'expectedResult' => '03939810000104'
         ];
         yield 'should_input_valid_data_2' => [
             'document' => '03939810000104',
-            'expectedResult' => '03939810/000104'
+            'expectedResult' => '03939810000104'
         ];
         yield 'should_input_valid_data_3' => [
             'document' => '3939810000104',
-            'expectedResult' => '03939810/000104'
+            'expectedResult' => '03939810000104'
         ];
         yield 'should_input_valid_data_4' => [
             'document' => '3939810000104ABCD',
-            'expectedResult' => '03939810/000104'
+            'expectedResult' => '03939810000104'
         ];
     }
 
