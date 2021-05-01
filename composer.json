@@ -24,7 +24,8 @@
     "minimum-stability" : "stable",
     "autoload": {
         "psr-4": {
-            "JC\\BrDocs\\" : "src/"
+            "JC\\BrDocs\\" : "src/",
+            "Tests\\": "tests/"
         }
     }
 }
