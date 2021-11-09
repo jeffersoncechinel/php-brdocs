@@ -45,15 +45,15 @@ var_dump(BrDoc::cpf('5944057009')->normalize()->isValid());
 
 // Formatar um CPF
 var_dump(BrDoc::cpf('05944057009')->format()->get());
-//string(14) "045.111.359-40"
+//string(14) "059.440.570-09"
 
 // Normalizar e formatar um CPF
-var_dump(BrDoc::cpf('05944057009')->normalize()->format()->get());
-//string(14) "045.111.359-40"
+var_dump(BrDoc::cpf('5944057009')->normalize()->format()->get());
+//string(14) "059.440.570-09"
 
 // Normalizar, validar e formatar um CPF
-var_dump(BrDoc::cpf('05944057009')->normalize()->validate()->format()->get());
-//string(14) "045.111.359-40"
+var_dump(BrDoc::cpf('5944057009')->normalize()->validate()->format()->get());
+//string(14) "059.440.570-09"
 
 
 ```
