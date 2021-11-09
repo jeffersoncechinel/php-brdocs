@@ -3,7 +3,7 @@
 namespace JC\BrDocs\Validators;
 
 use JC\BrDocs\Helpers\StringHelper;
-use JC\BrDocs\Traits\GeneratorTrait;
+use JC\BrDocs\Traits\CnpjTrait;
 
 /**
  * Class CnpjValidator
@@ -11,7 +11,7 @@ use JC\BrDocs\Traits\GeneratorTrait;
  */
 class CnpjValidator
 {
-    use GeneratorTrait;
+    use CnpjTrait;
 
     /**
      * @param $document
@@ -31,7 +31,7 @@ class CnpjValidator
         $secondVerifierDigit = self::generateCnpjVerifierDigit($digits . $firstVerifierDigit);
 
         $generated = $digits . $firstVerifierDigit . $secondVerifierDigit;
-        
+
         if ($generated != $cnpj) {
             return false;
         }

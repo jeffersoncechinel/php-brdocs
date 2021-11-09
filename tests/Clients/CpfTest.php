@@ -1,8 +1,7 @@
 <?php
 
-namespace JC\Acl\Tests;
+namespace Tests\Clients;
 
-use JC\Acl\Entities\Resource;
 use JC\BrDocs\Clients\Cpf;
 use PHPUnit\Framework\TestCase;
 
@@ -11,12 +10,12 @@ class CpfTest extends TestCase
     /**
      * @dataProvider normalizeProvider
      */
-    public function testNormalize($document)
+    public function testNormalize($document, $expectedResult)
     {
         $obj = new Cpf($document);
         $result = $obj->normalize()->get();
 
-        $this->assertEquals('05944057009', $result);
+        $this->assertEquals($expectedResult, $result);
     }
 
     /**
@@ -45,19 +44,19 @@ class CpfTest extends TestCase
     {
         yield 'should_input_valid_data_1' => [
             'document' => '059.440.570-09',
-            'expectedResult' => '03939810/000104'
+            'expectedResult' => '05944057009',
         ];
         yield 'should_input_valid_data_2' => [
             'document' => '05944057009',
-            'expectedResult' => '03939810/000104'
+            'expectedResult' => '05944057009',
         ];
         yield 'should_input_valid_data_3' => [
             'document' => '5944057009',
-            'expectedResult' => '03939810/000104'
+            'expectedResult' => '05944057009',
         ];
         yield 'should_input_valid_data_4' => [
             'document' => '5944057009ABCD',
-            'expectedResult' => '03939810/000104'
+            'expectedResult' => '05944057009',
         ];
     }
 
@@ -65,19 +64,19 @@ class CpfTest extends TestCase
     {
         yield 'should_input_valid_data_1' => [
             'document' => '059.440.570-09',
-            'expectedResult' => true
+            'expectedResult' => true,
         ];
         yield 'should_input_valid_data_2' => [
             'document' => '05944057009',
-            'expectedResult' => true
+            'expectedResult' => true,
         ];
         yield 'should_input_valid_data_3' => [
             'document' => '5944057009',
-            'expectedResult' => false
+            'expectedResult' => false,
         ];
         yield 'should_input_valid_data_4' => [
             'document' => '5944057009ABCD',
-            'expectedResult' => false
+            'expectedResult' => false,
         ];
     }
 
@@ -85,11 +84,11 @@ class CpfTest extends TestCase
     {
         yield 'should_input_valid_data_1' => [
             'document' => '059.440.570-09',
-            'expectedResult' => '059.440.570-09'
+            'expectedResult' => '059.440.570-09',
         ];
         yield 'should_input_valid_data_2' => [
             'document' => '05944057009',
-            'expectedResult' => '059.440.570-09'
+            'expectedResult' => '059.440.570-09',
         ];
     }
 }
