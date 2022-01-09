@@ -16,6 +16,8 @@ trait CnpjTrait
     {
         $sum = 0;
 
+        $positions = [];
+        
         // first digit
         if (mb_strlen($digits) == 12) {
             $positions = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
@@ -28,7 +30,6 @@ trait CnpjTrait
 
         for ($i = 0; $i < mb_strlen($digits); $i++) {
             $sum += $digits[$i] * $positions[$i];
-            $positions--;
         }
 
         $digit = $sum % 11;
