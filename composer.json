@@ -1,7 +1,7 @@
 {
   "name": "jeffersoncechinel/php-brdocs",
   "description": "PHP BrDocs auxilia na validação e formatação de documentos brasileiros como CPF e CNPJ",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "library",
   "readme": "https://github.com/jeffersoncechinel/php-brdocs/blob/master/README.md",
   "keywords": [
